@@ -1,6 +1,6 @@
-# TemplateProject
-> Это темплейт для нового проекта!
+# Broken
+> Сломанный не значит плохой
 > 
-> This is new project template!
+> Broken does not mean bad
 
-# Документация - TemplateProject
+# Документация - Broken
