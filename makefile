@@ -52,7 +52,7 @@ lint:
 
 # Open work in XCode
 open:
-	open TheBean.xcworkspace
+	open Broken.xcworkspace
 
 # Init project and open workspace
 run:
