@@ -1,0 +1,27 @@
+name: TemplateProject
+options:
+  bundleIdPrefix: heartsker
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  TemplateProject:
+    type: application
+    platform: iOS
+    sources: 
+      - path: TemplateProject
+    settings:
+      DEVELOPMENT_TEAM: XHRWYM4T65
+    scheme:
+      testTargets:
+      - TemplateProjectTests
+      - TemplateProjectUITests
+  TemplateProjectTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: TemplateProjectTests
+  TemplateProjectUITests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: TemplateProjectUITests
