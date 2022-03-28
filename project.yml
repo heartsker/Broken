@@ -1,27 +1,27 @@
-name: TemplateProject
+name: Broken
 options:
   bundleIdPrefix: heartsker
   deploymentTarget:
     iOS: 13.0
 targets:
-  TemplateProject:
+  Broken:
     type: application
     platform: iOS
     sources: 
-      - path: TemplateProject
+      - path: Broken
     settings:
       DEVELOPMENT_TEAM: XHRWYM4T65
     scheme:
       testTargets:
-      - TemplateProjectTests
-      - TemplateProjectUITests
-  TemplateProjectTests:
+      - BrokenTests
+      - BrokenUITests
+  BrokenTests:
     type: bundle.unit-test
     platform: iOS
     sources:
-      - path: TemplateProjectTests
-  TemplateProjectUITests:
+      - path: BrokenTests
+  BrokenUITests:
     type: bundle.unit-test
     platform: iOS
     sources:
-      - path: TemplateProjectUITests
+      - path: BrokenUITests
