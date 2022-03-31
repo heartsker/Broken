@@ -16,9 +16,9 @@ targets:
       - BrokenTests
       - BrokenUITests
     postCompileScripts:
-      - script: ${PODS_ROOT}/Swiftlint/swiftlint --fix
+      - script: Pods/Swiftlint/swiftlint --fix
         name: SwiftlintFix
-      - script: ${PODS_ROOT}/Swiftlint/swiftlint
+      - script: Pods/Swiftlint/swiftlint
         name: Swiftlint
   BrokenTests:
     type: bundle.unit-test

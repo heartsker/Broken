@@ -6,7 +6,7 @@ MAGENTA := $(shell tput -Txterm setaf 5)
 WHITE := $(shell tput -Txterm setaf 7)
 RESET := $(shell tput -Txterm sgr0)
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
-PROJECT := 'TheBean'
+PROJECT := Broken
 
 # Show help
 help:
@@ -63,8 +63,12 @@ init:
 lint:
 	@echo '${YELLOW}Running Linter:${RESET}'
 
+	@echo '${YELLOW}Updating swiftlint:${RESET}'
+	brew upgrade swiftlint || brew install swiftlint || (echo '${RED}Failed to install swiftlint${RESET}' && exit 1)
+	@echo '${GREEN}Swiftlint updated successfully${RESET}'
+	
 	@echo '${YELLOW}Running swiftlint fix:${RESET}'
-	Pods/Swiftlint/swiftlint --fix || (echo '${RED}Failed to  run swiftlint fix${RESET}' && exit 1)
+	Pods/Swiftlint/swiftlint --fix || (echo '${RED}Failed to run swiftlint fix${RESET}' && exit 1)
 	@echo '${GREEN}Swiftlint fix executed successfully${RESET}'
 
 	@echo '${YELLOW}Running swiftlint:${RESET}'
@@ -110,6 +114,10 @@ clean:
 
 # Install and update pods
 pods:
+	@echo '${YELLOW}Updating Cocoapods:${RESET}'
+	brew upgrade cocapods || brew install cocapods || (echo '${RED}Failed to install cocapods${RESET}' && exit 1)
+	@echo '${GREEN}Cocoapods updated successfully${RESET}'
+
 	@echo '${YELLOW}Installing Pods:${RESET}'
 	pod install || (echo '${RED}Failed to install Pods${RESET}' && exit 1)
 	@echo '${GREEN}Pods installed successfully${RESET}'
