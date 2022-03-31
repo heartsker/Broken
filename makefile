@@ -53,7 +53,7 @@ init:
 	xcodegen || (echo '${RED}Failed to run xcodegen${RESET}' && exit 1)
 	@echo '${GREEN}xcodegen executed successfully${RESET}'
 
-	make pods
+	make pod
 
 	make lint
 
