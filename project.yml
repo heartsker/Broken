@@ -1,6 +1,6 @@
 name: Broken
 options:
-  bundleIdPrefix: heartsker
+  bundleIdPrefix: ${BUNDLE_ID_PREFIX}
   deploymentTarget:
     iOS: 13.0
 targets:
@@ -10,7 +10,7 @@ targets:
     sources: 
       - path: Broken
     settings:
-      DEVELOPMENT_TEAM: XHRWYM4T65
+      DEVELOPMENT_TEAM: ${DEVELOPMENT_TEAM}
     scheme:
       testTargets:
       - BrokenTests
