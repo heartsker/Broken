@@ -34,9 +34,9 @@ help:
 # clean
 	@echo '	${BLUE}Clean DerivedData directory${RESET}:'
 	@echo '		${RED}make${RESET} ${GREEN}clean${RESET}'
-# pods
+# pod
 	@echo '	${BLUE}Install and update pods${RESET}:'
-	@echo '		${RED}make${RESET} ${GREEN}pods${RESET}'
+	@echo '		${RED}make${RESET} ${GREEN}pod${RESET}'
 # git
 	@echo '	${BLUE}Make a commit and push to the origin${RESET}:'
 	@echo '		${RED}make${RESET} ${GREEN}git${RESET} ${YELLOW}t="text"${RESET} ${MAGENTA}[b="body"]${RESET}'
@@ -113,7 +113,7 @@ clean:
 	@echo '${GREEN}Cache cleaned successfully${RESET}'
 
 # Install and update pods
-pods:
+pod:
 	@echo '${YELLOW}Updating Cocoapods:${RESET}'
 	brew upgrade cocapods || brew install cocapods || (echo '${RED}Failed to install cocapods${RESET}' && exit 1)
 	@echo '${GREEN}Cocoapods updated successfully${RESET}'
