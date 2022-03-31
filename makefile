@@ -68,11 +68,11 @@ lint:
 	@echo '${GREEN}Swiftlint updated successfully${RESET}'
 	
 	@echo '${YELLOW}Running swiftlint fix:${RESET}'
-	Pods/Swiftlint/swiftlint --fix || (echo '${RED}Failed to run swiftlint fix${RESET}' && exit 1)
+	Pods/SwiftLint/swiftlint --fix || (echo '${RED}Failed to run swiftlint fix${RESET}' && exit 1)
 	@echo '${GREEN}Swiftlint fix executed successfully${RESET}'
 
 	@echo '${YELLOW}Running swiftlint:${RESET}'
-	Pods/Swiftlint/swiftlint || (echo '${RED}Failed to run swiftlint${RESET}' && exit 1)
+	Pods/SwiftLint/swiftlint || (echo '${RED}Failed to run swiftlint${RESET}' && exit 1)
 	@echo '${GREEN}Swiftlint executed successfully${RESET}'
 
 # Open workspace in XCode
@@ -115,7 +115,7 @@ clean:
 # Install and update pods
 pod:
 	@echo '${YELLOW}Updating Cocoapods:${RESET}'
-	brew upgrade cocoapods || brew install cocoapods || (echo '${RED}Failed to install cocapods${RESET}' && exit 1)
+	brew upgrade cocoapods || brew install cocoapods || (echo '${RED}Failed to install cocoapods${RESET}' && exit 1)
 	@echo '${GREEN}Cocoapods updated successfully${RESET}'
 
 	@echo '${YELLOW}Installing Pods:${RESET}'
