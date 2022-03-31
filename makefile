@@ -115,7 +115,7 @@ clean:
 # Install and update pods
 pod:
 	@echo '${YELLOW}Updating Cocoapods:${RESET}'
-	brew upgrade cocapods || brew install cocapods || (echo '${RED}Failed to install cocapods${RESET}' && exit 1)
+	brew upgrade cocoapods || brew install cocoapods || (echo '${RED}Failed to install cocapods${RESET}' && exit 1)
 	@echo '${GREEN}Cocoapods updated successfully${RESET}'
 
 	@echo '${YELLOW}Installing Pods:${RESET}'
