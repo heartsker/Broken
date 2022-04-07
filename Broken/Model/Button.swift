@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Button: Int {
+enum Button: Int, CaseIterable {
     case zero
     case one
     case two
