@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ButtonsSet {
     var buttons: [Button: Bool]
@@ -22,6 +23,17 @@ class ButtonsSet {
         }
         for button in activeButtons {
             buttons[button] = true
+        }
+    }
+}
+
+extension ButtonsSet {
+    subscript (index: Button) -> Bool {
+        get {
+            buttons[index] ?? false
+        }
+        set {
+            buttons[index] = newValue
         }
     }
 }
