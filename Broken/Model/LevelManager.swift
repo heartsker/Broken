@@ -8,10 +8,14 @@
 import Foundation
 
 class LevelManager {
+    static let shared = LevelManager()
+
     private var levels: [Level]
-    init () {
+
+    private init () {
         levels = []
     }
+
     func add (level: Level) {
         if !levels.contains(where: { tmp in
             level.number == tmp.number
