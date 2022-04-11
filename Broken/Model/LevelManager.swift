@@ -8,18 +8,17 @@
 import Foundation
 
 class LevelManager {
-    private var levels: [Level]
+    private var levels: [Int: Level]
     init () {
-        levels = []
+        levels = [:]
     }
     func add (level: Level) {
-        if !levels.contains(where: { tmp in
-            level.number == tmp.number
-        }) {
-            levels.append(level)
+        if levels[level.number] == nil {
+           levels[level.number] = level
         }
+
     }
     subscript (index: Int) -> Level {
-        levels[index]
+        levels[index]!
     }
 }
