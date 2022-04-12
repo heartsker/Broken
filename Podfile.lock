@@ -1,16 +1,23 @@
 PODS:
+  - LevelGenerator (0.1.0)
   - SwiftLint (0.47.0)
 
 DEPENDENCIES:
+  - LevelGenerator (from `LocalPods/LevelGenerator`)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - SwiftLint
 
+EXTERNAL SOURCES:
+  LevelGenerator:
+    :path: LocalPods/LevelGenerator
+
 SPEC CHECKSUMS:
+  LevelGenerator: a6559a8adf91e17a8c04d82960cb40ce0e39fc9a
   SwiftLint: d41cc46a2ae58ac6d9f26954bc89f1d72e71fdef
 
-PODFILE CHECKSUM: faafabda89b0e2092d11116316e3a5c3cc9b3d99
+PODFILE CHECKSUM: 4d274d94a708e47a0faaae2f2e87045b96dd1f79
 
 COCOAPODS: 1.11.3
