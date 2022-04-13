@@ -9,16 +9,12 @@ target 'Broken' do
   use_frameworks!
 
   # Pods for Broken
+  
+  # Linter
   pod 'SwiftLint'
 
-  target 'BrokenTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'BrokenUITests' do
-    # Pods for testing
-  end
+  # Local Pods
+  pod 'LevelGenerator', :path => 'LocalPods/LevelGenerator'
 
 end
 
