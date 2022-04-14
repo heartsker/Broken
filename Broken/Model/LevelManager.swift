@@ -12,11 +12,11 @@ class LevelManager {
     init () {
         levels = [:]
     }
-    func add (level: Level) {
+    func add(level: Level) {
         if levels[level.number] == nil {
             levels[level.number] = level
-
         }
+
     }
     subscript (index: Int) -> Level? {
         levels[index]
