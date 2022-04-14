@@ -14,14 +14,24 @@ class Level {
     var startNumber: Int
     var finishNumber: Int
     var buttons: ButtonsSet
+    var difficulty: Int
+    var bestPossibleScore: Int
+    var bestScore: Int?
+    var stars: Int? {
+        nil
+    }
 
-    init(number: Int, name: String, story: String?, startNumber: Int, finishNumber: Int) {
+    init(number: Int, name: String, story: String?, startNumber: Int, finishNumber: Int, difficulty: Int, bestPossibleScore: Int) {
         self.number = number
         self.name = name
         self.story = story
         self.startNumber = startNumber
         self.finishNumber = finishNumber
         self.buttons = ButtonsSet()
+        self.difficulty = difficulty
+        self.bestPossibleScore = bestPossibleScore
+
+        bestScore = nil
     }
 }
 
