@@ -13,6 +13,10 @@ class Level {
     var story: String?
     var startNumber: Int
     var finishNumber: Int
+<<<<<<< HEAD
+=======
+    var buttons: ButtonsSet
+>>>>>>> TIC-21-LevelGenerator
 
     init(number: Int, name: String, story: String?, startNumber: Int, finishNumber: Int) {
         self.number = number
@@ -20,6 +24,10 @@ class Level {
         self.story = story
         self.startNumber = startNumber
         self.finishNumber = finishNumber
+<<<<<<< HEAD
+=======
+        self.buttons = ButtonsSet()
+>>>>>>> TIC-21-LevelGenerator
     }
 }
 
