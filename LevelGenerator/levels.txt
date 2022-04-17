@@ -1,0 +1,426 @@
+Level #1
+Level:
+        Start: -9
+        Finish: 8
+        Buttons: ['OPEN', 'POINT', 'TWO', 'NINE', 'FIVE', 'DIVIDE', 'EIGHT', 'PLUS', 'CLOSE', 'FOUR', 'THREE', 'MULTIPLY', 'SEVEN', 'SIX', 'ZERO', 'MINUS', 'SIGN']
+41 out of 319763 - 0.00012821996291003025
+--------------------------------
+-------- 1 out of 1 -----------
+Level #2
+Level:
+        Start: 97
+        Finish: -23
+        Buttons: ['MINUS', 'CLOSE', 'OPEN', 'FOUR', 'ZERO', 'POINT', 'EIGHT', 'THREE', 'ONE', 'NINE', 'SIGN', 'MULTIPLY', 'TWO', 'DIVIDE']
+7 out of 267003 - 2.6216933892128554e-05
+--------------------------------
+-------- 2 out of 2 -----------
+-------- 2 out of 3 -----------
+-------- 2 out of 4 -----------
+Level #3
+Level:
+        Start: -14
+        Finish: 98
+        Buttons: ['ONE', 'MULTIPLY', 'DIVIDE', 'POINT', 'SIGN', 'NINE', 'FIVE', 'FOUR']
+4 out of 470803 - 8.496122582056615e-06
+--------------------------------
+-------- 3 out of 5 -----------
+Level #4
+Level:
+        Start: -87
+        Finish: -60
+        Buttons: ['PLUS', 'SIX', 'FOUR', 'POINT', 'THREE', 'SIGN', 'ZERO', 'ONE', 'MULTIPLY', 'TWO', 'DIVIDE']
+24 out of 515076 - 4.6595065582554805e-05
+--------------------------------
+-------- 4 out of 6 -----------
+Level #5
+Level:
+        Start: 79
+        Finish: 77
+        Buttons: ['DIVIDE', 'FOUR', 'CLOSE', 'POINT', 'ONE', 'SEVEN', 'TWO', 'NINE', 'OPEN', 'MINUS']
+1439 out of 249780 - 0.005761069741372408
+--------------------------------
+-------- 5 out of 7 -----------
+Level #6
+Level:
+        Start: -30
+        Finish: -61
+        Buttons: ['ZERO', 'FIVE', 'SEVEN', 'MULTIPLY', 'SIGN', 'TWO', 'PLUS', 'DIVIDE', 'NINE', 'ONE']
+169 out of 540906 - 0.0003124387601542597
+--------------------------------
+-------- 6 out of 8 -----------
+Level #7
+Level:
+        Start: -23
+        Finish: -7
+        Buttons: ['POINT', 'ZERO', 'SIGN', 'OPEN', 'FIVE', 'TWO', 'FOUR', 'CLOSE', 'PLUS', 'MINUS', 'MULTIPLY', 'DIVIDE', 'SIX', 'ONE', 'EIGHT', 'NINE']
+86 out of 290010 - 0.00029654149856901484
+--------------------------------
+-------- 7 out of 9 -----------
+-------- 7 out of 10 -----------
+Level #8
+Level:
+        Start: 61
+        Finish: -24
+        Buttons: ['FIVE', 'OPEN', 'SIGN', 'SIX', 'FOUR', 'ZERO', 'DIVIDE', 'THREE', 'ONE', 'NINE', 'CLOSE', 'MULTIPLY', 'TWO', 'SEVEN', 'MINUS']
+11 out of 320401 - 3.433197774039407e-05
+--------------------------------
+-------- 8 out of 11 -----------
+Level #9
+Level:
+        Start: -100
+        Finish: -74
+        Buttons: ['NINE', 'EIGHT', 'THREE', 'SIX', 'TWO', 'SEVEN', 'SIGN', 'FIVE', 'CLOSE', 'PLUS', 'ONE', 'ZERO', 'DIVIDE']
+71 out of 449690 - 0.00015788654406368832
+--------------------------------
+-------- 9 out of 12 -----------
+Level #10
+Level:
+        Start: -31
+        Finish: -94
+        Buttons: ['SEVEN', 'SIX', 'DIVIDE', 'FOUR', 'MULTIPLY', 'ONE', 'CLOSE', 'ZERO', 'OPEN', 'NINE', 'PLUS']
+1 out of 260703 - 3.8357824804470985e-06
+--------------------------------
+-------- 10 out of 13 -----------
+-------- 10 out of 14 -----------
+Level #11
+Level:
+        Start: 19
+        Finish: 20
+        Buttons: ['FOUR', 'ONE', 'ZERO', 'CLOSE', 'MINUS', 'PLUS', 'SEVEN', 'SIX', 'OPEN', 'TWO']
+1435 out of 271524 - 0.005284984016145903
+--------------------------------
+-------- 11 out of 15 -----------
+Level #12
+Level:
+        Start: -10
+        Finish: -90
+        Buttons: ['CLOSE', 'EIGHT', 'OPEN', 'MULTIPLY', 'FIVE', 'PLUS', 'SEVEN', 'NINE', 'FOUR', 'POINT', 'ONE', 'THREE', 'TWO']
+801 out of 374806 - 0.002137105595961644
+--------------------------------
+-------- 12 out of 16 -----------
+Level #13
+Level:
+        Start: -34
+        Finish: -81
+        Buttons: ['THREE', 'TWO', 'FOUR', 'MULTIPLY', 'SIGN', 'MINUS', 'DIVIDE', 'PLUS', 'FIVE', 'SEVEN', 'OPEN', 'SIX']
+140 out of 353868 - 0.00039562774819989376
+--------------------------------
+-------- 13 out of 17 -----------
+-------- 13 out of 18 -----------
+Level #14
+Level:
+        Start: -2
+        Finish: -62
+        Buttons: ['EIGHT', 'FIVE', 'ZERO', 'DIVIDE', 'POINT', 'NINE', 'MULTIPLY', 'CLOSE', 'THREE', 'ONE', 'MINUS']
+178 out of 407965 - 0.0004363119385241381
+--------------------------------
+-------- 14 out of 19 -----------
+Level #15
+Level:
+        Start: -28
+        Finish: -83
+        Buttons: ['SIX', 'SIGN', 'CLOSE', 'OPEN', 'THREE', 'SEVEN', 'FOUR', 'ZERO', 'MINUS', 'FIVE', 'TWO', 'MULTIPLY', 'POINT', 'NINE']
+48 out of 305932 - 0.00015689761123386896
+--------------------------------
+-------- 15 out of 20 -----------
+Level #16
+Level:
+        Start: 29
+        Finish: -78
+        Buttons: ['MINUS', 'POINT', 'SEVEN', 'FIVE', 'EIGHT']
+12 out of 695837 - 1.7245418107976438e-05
+--------------------------------
+-------- 16 out of 21 -----------
+Level #17
+Level:
+        Start: 26
+        Finish: 83
+        Buttons: ['SIGN', 'FOUR', 'POINT', 'NINE', 'THREE', 'FIVE', 'ONE', 'MINUS', 'OPEN', 'SEVEN', 'ZERO', 'CLOSE', 'DIVIDE', 'SIX', 'MULTIPLY', 'TWO']
+3 out of 326067 - 9.200563074460158e-06
+--------------------------------
+-------- 17 out of 22 -----------
+Level #18
+Level:
+        Start: 33
+        Finish: 78
+        Buttons: ['TWO', 'POINT', 'CLOSE', 'THREE', 'PLUS']
+39 out of 196728 - 0.0001982432597291692
+--------------------------------
+-------- 18 out of 23 -----------
+Level #19
+Level:
+        Start: 66
+        Finish: -47
+        Buttons: ['PLUS', 'NINE', 'SEVEN', 'POINT', 'SIX', 'MINUS', 'EIGHT', 'MULTIPLY', 'FOUR', 'OPEN', 'ONE', 'CLOSE', 'FIVE', 'ZERO', 'TWO', 'SIGN']
+6 out of 330442 - 1.815749813885644e-05
+--------------------------------
+-------- 19 out of 24 -----------
+Level #20
+Level:
+        Start: 72
+        Finish: 71
+        Buttons: ['MULTIPLY', 'DIVIDE', 'CLOSE', 'ONE', 'ZERO', 'PLUS', 'NINE', 'SIGN', 'TWO', 'FOUR', 'OPEN', 'MINUS', 'SIX', 'FIVE', 'POINT']
+808 out of 260439 - 0.003102453933550659
+--------------------------------
+-------- 20 out of 25 -----------
+Level #21
+Level:
+        Start: -84
+        Finish: -3
+        Buttons: ['ONE', 'MINUS', 'SIGN', 'THREE']
+3 out of 360800 - 8.314855875831486e-06
+--------------------------------
+-------- 21 out of 26 -----------
+Level #22
+Level:
+        Start: 85
+        Finish: -3
+        Buttons: ['ONE', 'SIGN', 'FIVE', 'SIX', 'PLUS']
+14 out of 450036 - 3.11086224213174e-05
+--------------------------------
+-------- 22 out of 27 -----------
+Level #23
+Level:
+        Start: 29
+        Finish: -69
+        Buttons: ['SIX', 'MINUS', 'CLOSE', 'OPEN', 'FIVE', 'FOUR', 'SEVEN', 'PLUS', 'MULTIPLY', 'THREE', 'EIGHT', 'TWO', 'POINT', 'ONE', 'ZERO', 'NINE', 'DIVIDE']
+36 out of 409793 - 8.78492311972142e-05
+--------------------------------
+-------- 23 out of 28 -----------
+Level #24
+Level:
+        Start: -51
+        Finish: -33
+        Buttons: ['POINT', 'CLOSE', 'SIX', 'PLUS', 'MULTIPLY', 'DIVIDE', 'EIGHT', 'NINE', 'SEVEN', 'SIGN', 'THREE', 'MINUS', 'ZERO', 'FOUR', 'FIVE', 'TWO', 'OPEN']
+42 out of 320922 - 0.00013087292239235702
+--------------------------------
+-------- 24 out of 29 -----------
+Level #25
+Level:
+        Start: -39
+        Finish: -68
+        Buttons: ['SEVEN', 'SIGN', 'OPEN', 'SIX', 'TWO', 'MINUS']
+82 out of 214593 - 0.00038211870843876547
+--------------------------------
+-------- 25 out of 30 -----------
+Level #26
+Level:
+        Start: 97
+        Finish: 70
+        Buttons: ['NINE', 'POINT', 'CLOSE', 'PLUS', 'FOUR', 'ZERO', 'FIVE', 'SEVEN', 'MULTIPLY', 'ONE', 'MINUS', 'SIGN', 'OPEN', 'THREE']
+25 out of 270968 - 9.226181689350772e-05
+--------------------------------
+-------- 26 out of 31 -----------
+Level #27
+Level:
+        Start: -38
+        Finish: 76
+        Buttons: ['OPEN', 'NINE', 'TWO', 'ONE', 'ZERO', 'FOUR', 'MINUS', 'SIGN', 'EIGHT', 'MULTIPLY']
+242 out of 341809 - 0.0007079977414286927
+--------------------------------
+-------- 27 out of 32 -----------
+Level #28
+Level:
+        Start: -7
+        Finish: -93
+        Buttons: ['SIGN', 'SIX', 'SEVEN', 'PLUS', 'NINE', 'OPEN', 'TWO', 'DIVIDE', 'EIGHT', 'MULTIPLY', 'POINT', 'CLOSE', 'FIVE']
+7 out of 249765 - 2.8026344764078233e-05
+--------------------------------
+-------- 28 out of 33 -----------
+-------- 28 out of 34 -----------
+Level #29
+Level:
+        Start: 39
+        Finish: 96
+        Buttons: ['MULTIPLY', 'MINUS', 'PLUS', 'FIVE', 'EIGHT', 'ZERO', 'DIVIDE', 'TWO', 'NINE']
+97 out of 666610 - 0.00014551236855132687
+--------------------------------
+-------- 29 out of 35 -----------
+Level #30
+Level:
+        Start: 77
+        Finish: 95
+        Buttons: ['THREE', 'SIGN', 'NINE', 'CLOSE', 'MULTIPLY', 'SIX', 'PLUS', 'TWO', 'EIGHT', 'POINT', 'ONE', 'ZERO', 'MINUS', 'FIVE', 'DIVIDE', 'FOUR']
+69 out of 430831 - 0.00016015560625860255
+--------------------------------
+-------- 30 out of 36 -----------
+Level #31
+Level:
+        Start: 69
+        Finish: 25
+        Buttons: ['SIX', 'MINUS', 'ONE', 'THREE', 'MULTIPLY', 'TWO', 'OPEN', 'EIGHT', 'FIVE', 'POINT', 'ZERO', 'DIVIDE', 'PLUS', 'CLOSE']
+18 out of 303606 - 5.9287365862334735e-05
+--------------------------------
+-------- 31 out of 37 -----------
+-------- 31 out of 38 -----------
+-------- 31 out of 39 -----------
+Level #32
+Level:
+        Start: -27
+        Finish: 41
+        Buttons: ['ZERO', 'THREE', 'PLUS', 'ONE', 'EIGHT']
+130 out of 996867 - 0.00013040857004996656
+--------------------------------
+-------- 32 out of 40 -----------
+-------- 32 out of 41 -----------
+Level #33
+Level:
+        Start: 50
+        Finish: -76
+        Buttons: ['TWO', 'MULTIPLY', 'SIGN', 'FIVE', 'DIVIDE', 'PLUS', 'CLOSE', 'SEVEN', 'NINE']
+3 out of 270175 - 1.110391412973073e-05
+--------------------------------
+-------- 33 out of 42 -----------
+Level #34
+Level:
+        Start: 48
+        Finish: 54
+        Buttons: ['SEVEN', 'MULTIPLY', 'CLOSE', 'PLUS', 'FOUR', 'EIGHT', 'NINE', 'MINUS', 'TWO', 'OPEN', 'POINT', 'SIGN', 'DIVIDE', 'SIX']
+893 out of 243210 - 0.0036717240245055715
+--------------------------------
+-------- 34 out of 43 -----------
+Level #35
+Level:
+        Start: 46
+        Finish: 29
+        Buttons: ['EIGHT', 'MINUS', 'TWO', 'ONE', 'SIGN', 'PLUS', 'FOUR', 'NINE', 'DIVIDE', 'SEVEN', 'CLOSE', 'THREE', 'POINT', 'MULTIPLY', 'SIX', 'ZERO']
+73 out of 430347 - 0.00016963055394832543
+--------------------------------
+-------- 35 out of 44 -----------
+Level #36
+Level:
+        Start: -33
+        Finish: -95
+        Buttons: ['DIVIDE', 'POINT', 'NINE', 'MINUS', 'CLOSE', 'SIX', 'FOUR', 'SIGN']
+2 out of 214088 - 9.341952841822055e-06
+--------------------------------
+-------- 36 out of 45 -----------
+-------- 36 out of 46 -----------
+Level #37
+Level:
+        Start: 85
+        Finish: 5
+        Buttons: ['NINE', 'SEVEN', 'PLUS', 'THREE', 'FOUR', 'EIGHT', 'CLOSE', 'SIX', 'POINT', 'DIVIDE', 'OPEN', 'MINUS', 'ZERO', 'TWO', 'MULTIPLY', 'ONE', 'SIGN']
+87 out of 317726 - 0.0002738208393395567
+--------------------------------
+-------- 37 out of 47 -----------
+-------- 37 out of 48 -----------
+Level #38
+Level:
+        Start: 31
+        Finish: -23
+        Buttons: ['OPEN', 'PLUS', 'SIX', 'MINUS', 'POINT', 'SIGN', 'SEVEN', 'NINE', 'THREE', 'DIVIDE', 'EIGHT', 'TWO']
+124 out of 343235 - 0.00036126851865340076
+--------------------------------
+-------- 38 out of 49 -----------
+Level #39
+Level:
+        Start: 61
+        Finish: 94
+        Buttons: ['ZERO', 'FIVE', 'OPEN', 'POINT', 'MULTIPLY', 'TWO', 'SEVEN', 'NINE', 'EIGHT', 'PLUS']
+11 out of 444553 - 2.474395628867649e-05
+--------------------------------
+-------- 39 out of 50 -----------
+Level #40
+Level:
+        Start: -93
+        Finish: -99
+        Buttons: ['SIX', 'FOUR', 'SIGN', 'FIVE', 'SEVEN', 'TWO', 'THREE', 'ZERO', 'OPEN', 'PLUS', 'NINE', 'CLOSE', 'EIGHT', 'MULTIPLY', 'ONE', 'DIVIDE', 'MINUS']
+520 out of 341936 - 0.0015207524215057788
+--------------------------------
+-------- 40 out of 51 -----------
+Level #41
+Level:
+        Start: -5
+        Finish: 37
+        Buttons: ['NINE', 'DIVIDE', 'SIGN', 'THREE', 'PLUS', 'SEVEN', 'FOUR', 'MULTIPLY', 'POINT', 'ONE', 'ZERO', 'SIX', 'OPEN', 'TWO', 'EIGHT', 'CLOSE']
+64 out of 324526 - 0.00019721070114567092
+--------------------------------
+-------- 41 out of 52 -----------
+Level #42
+Level:
+        Start: 7
+        Finish: 83
+        Buttons: ['TWO', 'SIX', 'THREE', 'MULTIPLY', 'POINT', 'MINUS', 'CLOSE', 'ONE', 'FIVE', 'PLUS', 'ZERO', 'NINE', 'SIGN', 'FOUR', 'DIVIDE', 'OPEN', 'SEVEN', 'EIGHT']
+217 out of 349978 - 0.0006200389738783581
+--------------------------------
+-------- 42 out of 53 -----------
+Level #43
+Level:
+        Start: -72
+        Finish: -53
+        Buttons: ['SIX', 'POINT', 'TWO', 'FOUR', 'DIVIDE', 'PLUS', 'SEVEN', 'ONE', 'MINUS', 'MULTIPLY', 'ZERO', 'CLOSE', 'NINE', 'FIVE']
+73 out of 490395 - 0.000148859592777251
+--------------------------------
+-------- 43 out of 54 -----------
+-------- 43 out of 55 -----------
+-------- 43 out of 56 -----------
+-------- 43 out of 57 -----------
+Level #44
+Level:
+        Start: -70
+        Finish: 86
+        Buttons: ['DIVIDE', 'SIGN', 'POINT', 'ONE', 'SIX', 'PLUS']
+172 out of 278790 - 0.0006169518275404427
+--------------------------------
+-------- 44 out of 58 -----------
+Level #45
+Level:
+        Start: -40
+        Finish: -88
+        Buttons: ['DIVIDE', 'FIVE', 'MINUS', 'CLOSE', 'EIGHT', 'NINE', 'TWO', 'OPEN', 'SIX', 'FOUR', 'SIGN', 'THREE', 'ONE', 'MULTIPLY', 'POINT']
+61 out of 311858 - 0.00019560184442919535
+--------------------------------
+-------- 45 out of 59 -----------
+-------- 45 out of 60 -----------
+Level #46
+Level:
+        Start: -19
+        Finish: 30
+        Buttons: ['TWO', 'OPEN', 'SIGN', 'MULTIPLY', 'DIVIDE', 'MINUS', 'CLOSE', 'SEVEN']
+15 out of 107125 - 0.00014002333722287048
+--------------------------------
+-------- 46 out of 61 -----------
+-------- 46 out of 62 -----------
+Level #47
+Level:
+        Start: 45
+        Finish: 95
+        Buttons: ['ONE', 'ZERO', 'TWO', 'THREE', 'SIGN', 'NINE', 'MULTIPLY', 'MINUS', 'SEVEN', 'CLOSE', 'SIX', 'FOUR', 'POINT', 'FIVE', 'DIVIDE', 'OPEN', 'PLUS']
+56 out of 319137 - 0.00017547322936544492
+--------------------------------
+-------- 47 out of 63 -----------
+-------- 47 out of 64 -----------
+-------- 47 out of 65 -----------
+Level #48
+Level:
+        Start: -100
+        Finish: -53
+        Buttons: ['NINE', 'THREE', 'SEVEN', 'ONE', 'PLUS', 'TWO', 'SIGN', 'CLOSE', 'SIX', 'FIVE', 'POINT', 'MINUS', 'DIVIDE']
+28 out of 386587 - 7.2428715916469e-05
+--------------------------------
+-------- 48 out of 66 -----------
+Level #49
+Level:
+        Start: -100
+        Finish: 19
+        Buttons: ['SIGN', 'DIVIDE', 'POINT', 'SIX', 'NINE', 'ZERO', 'TWO', 'MULTIPLY', 'MINUS']
+5 out of 385407 - 1.2973298357320962e-05
+--------------------------------
+-------- 49 out of 67 -----------
+Level #50
+Level:
+        Start: 62
+        Finish: 16
+        Buttons: ['PLUS', 'NINE', 'ONE', 'TWO', 'ZERO', 'SIX', 'OPEN', 'DIVIDE']
+3 out of 371817 - 8.06848530325402e-06
+--------------------------------
+-------- 50 out of 68 -----------
+Level #51
+Level:
+        Start: 46
+        Finish: 38
+        Buttons: ['DIVIDE', 'MINUS', 'ZERO', 'SIX', 'NINE', 'FOUR', 'POINT']
+121 out of 615654 - 0.00019653896506804147
+--------------------------------
+-------- 51 out of 69 -----------
