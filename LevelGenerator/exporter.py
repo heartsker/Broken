@@ -12,7 +12,7 @@ def export(levels):
 
         data[str(number)] = { 'difficulty': percent, 'start': start, 'finish': finish, 'buttons': buttons }
         
-    dump = json.dumps(data)
+    dump = json.dumps(data, indent=4)
 
     # print(dump)
 
