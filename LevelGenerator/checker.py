@@ -12,7 +12,6 @@ def check(level):
 
     for i in range(iterations):
         line = str(level.start)
-        hasPoint = False
 
         for j in range(max_clicks):
 
@@ -24,7 +23,6 @@ def check(level):
                     line = line[:-1]
                 
                 line += random.choice(level.operators)
-                hasPoint = False
             else:
                 # add number
                 line += random.choice(level.numbers)
