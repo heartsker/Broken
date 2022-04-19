@@ -10,3 +10,6 @@ class Level:
         print('\tFinish:', self.finish)
         print('\tNumber:', self.numbers)
         print('\tOperators:', self.operators)
+
+    def buttons(self):
+        return self.numbers + self.operators
