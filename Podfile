@@ -14,6 +14,8 @@ target 'Broken' do
   pod 'SwiftLint'
 
   # Local Pods
+  pod 'Core', :path => 'LocalPods/Core'
   pod 'LevelGenerator', :path => 'LocalPods/LevelGenerator'
+  pod 'LevelManager', :path => 'LocalPods/LevelManager'
 
 end
