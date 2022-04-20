@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
 
-  spec.name = "LevelGenerator"
+  spec.name = "LevelManager"
   spec.version = "0.1.0"
   
-  spec.summary = "LevelGenerator provides functionality to generate and export levels"
+  spec.summary = "LevelManager provides functionality to manage levels for app purposes"
 
   spec.homepage = "Local"
   spec.author = { "Daniel Pustotin" => "daniel.pustotin@gmail.com" }
@@ -15,5 +15,6 @@ Pod::Spec.new do |spec|
   spec.source_files = "#{spec.name}/**/*.{swift}"
 
   spec.dependency "Core"
+  spec.dependency "LevelGenerator"
 end
   

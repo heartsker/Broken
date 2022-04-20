@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
 
-  spec.name = "LevelGenerator"
+  spec.name = "Core"
   spec.version = "0.1.0"
   
-  spec.summary = "LevelGenerator provides functionality to generate and export levels"
+  spec.summary = "Core module provides basic functionality and data structures"
 
   spec.homepage = "Local"
   spec.author = { "Daniel Pustotin" => "daniel.pustotin@gmail.com" }
@@ -13,7 +13,5 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
 
   spec.source_files = "#{spec.name}/**/*.{swift}"
-
-  spec.dependency "Core"
 end
   
