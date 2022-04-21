@@ -17,4 +17,3 @@ Pod::Spec.new do |spec|
   spec.dependency "Core"
   spec.dependency "LevelGenerator"
 end
-  
