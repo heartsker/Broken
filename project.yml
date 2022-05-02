@@ -28,8 +28,14 @@ targets:
         UILaunchStoryboardName: LaunchScreen
         UIRequiresFullScreen: true
         UISupportedInterfaceOrientations: []
-    preBuildScripts:
-      - script: Pods/Swiftlint/swiftlint --fix
+    postCompileScripts:
+      - script: |
+          if [ -z "$CI" ]; then
+          ${PODS_ROOT}/SwiftLint/swiftlint --fix
+          fi
         name: SwiftlintFix
-      - script: Pods/Swiftlint/swiftlint
+      - script: |
+          if [ -z "$CI" ]; then
+          ${PODS_ROOT}/SwiftLint/swiftlint
+          fi
         name: Swiftlint
