@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Level {
-    var number: Int
+public class Level {
+    public private(set) var number: Int
     var name: String
     var story: String?
     var startNumber: Int
@@ -26,7 +26,7 @@ class Level {
 }
 
 extension Level: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         var str = "Level - \(number)\nName - \(name)\n"
         if story != nil {
             str += "Story: \(story!)\n"
