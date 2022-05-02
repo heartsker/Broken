@@ -43,7 +43,7 @@ extension Button: CustomStringConvertible {
         case .sign :
             return "􀍶"
         default :
-            return String(Button.allcases.map { $0.rawValue }.firstIndex(of: self.rawValue) ?? 0)
+            return String(Button.allCases.map { $0.rawValue }.firstIndex(of: self.rawValue) ?? 0)
         }
     }
 }

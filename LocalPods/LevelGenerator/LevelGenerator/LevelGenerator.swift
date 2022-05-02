@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Broken
+import Core
 
 class LevelGenerator {
     func readLocalFile(forName name: String) -> Data? {
@@ -21,12 +21,12 @@ class LevelGenerator {
         return nil
     }
 
-    func parse(data: Data) throws -> [Level] {
+    func parse(data: Data) throws -> [Level]? {
         do {
             if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                 var levels: [Level] = []
                 for i in 1...json.count {
-                    guard let level = json["\(i)"] as [String: Any],
+                    guard let level = json["\(i)"] as? [String: Any],
                           let difficulty = level["difficulty"] as? Double,
                           let buttons = level["buttons"] as? [String],
                           let start = level["start"] as? Int,
