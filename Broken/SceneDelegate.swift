@@ -10,16 +10,22 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var coordinator: AppCoordinator?
 
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
-        guard let scene = scene as? UIWindowScene else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let nc = UINavigationController(rootViewController: ViewController())
+        let navController = UINavigationController()
 
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = nc
+        coordinator = AppCoordinator(navigationController: navController)
+
+        coordinator?.start()
+
+        // create a basic UIWindow and activate it
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }
 
@@ -37,5 +43,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
-
 }
