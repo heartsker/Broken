@@ -55,7 +55,6 @@ custom_rules:
       - keyword
       - parameter
       - typeidentifier
-      - comment
       - doccomment
     severity: error
 

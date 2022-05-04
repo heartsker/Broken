@@ -29,7 +29,7 @@ extension Level: CustomStringConvertible {
     public var description: String {
         var str = "Level - \(number)\nName - \(name)\n"
         if story != nil {
-            str += "Story: \(story!)\n"
+            str += "Story: \(story ?? "")\n"
         }
         str += "You started from \(startNumber), and the goal is \(finishNumber)!"
         return str
