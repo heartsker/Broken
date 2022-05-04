@@ -5,7 +5,7 @@ PODS:
   - LevelManager (0.1.0):
     - Core
     - LevelGenerator
-  - SwiftLint (0.47.0)
+  - SwiftLint (0.47.1)
 
 DEPENDENCIES:
   - Core (from `LocalPods/Core`)
@@ -29,7 +29,7 @@ SPEC CHECKSUMS:
   Core: 26cd3a81f5b916a5088953c839615c141ccdfac8
   LevelGenerator: c35fe2617669cfbfcdb98e77951500540b3315aa
   LevelManager: 9e702f70f2457927e31dc75659e23522cf09a4e5
-  SwiftLint: d41cc46a2ae58ac6d9f26954bc89f1d72e71fdef
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
 
 PODFILE CHECKSUM: 8375687809b05fb6166818a42b076e621758fd91
 
