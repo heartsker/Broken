@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Button: String, CaseIterable {
+public enum Button: String, CaseIterable {
     case zero
     case one
     case two
@@ -27,7 +27,7 @@ enum Button: String, CaseIterable {
 }
 
 extension Button: CustomStringConvertible {
-    var description: String {
+   public var description: String {
         switch self {
 
         case .plus :

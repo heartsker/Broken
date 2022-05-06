@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ButtonsSet {
+public class ButtonsSet {
     var buttons: [Button: Bool]
     init(all: Bool = true) {
         buttons = [:]
@@ -15,7 +15,7 @@ class ButtonsSet {
             buttons[buttonCase] = all
         }
     }
-    init(activeButtons: [Button]) {
+   public init(activeButtons: [Button]) {
         buttons = [:]
         for button in Button.allCases {
             buttons[button] = false
