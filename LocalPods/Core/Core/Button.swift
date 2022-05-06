@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public enum Button: String, CaseIterable {
     case zero
     case one
