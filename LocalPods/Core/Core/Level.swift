@@ -11,16 +11,20 @@ public class Level {
     public private(set) var number: Int
     var name: String
     var story: String?
-    var startNumber: Int
-    var finishNumber: Int
+    var difficulty: Double
+    var start: Int
+    var finish: Int
+    var best_score: Int
     var buttons: ButtonsSet
 
-    init(number: Int, name: String, story: String?, startNumber: Int, finishNumber: Int) {
+    public init(number: Int, name: String = "", story: String? = nil, difficulty: Double, start: Int, finish: Int, best_score: Int, buttons: ButtonsSet) {
         self.number = number
         self.name = name
         self.story = story
-        self.startNumber = startNumber
-        self.finishNumber = finishNumber
+        self.difficulty = difficulty
+        self.start = start
+        self.finish = finish
+        self.best_score = best_score
         self.buttons = ButtonsSet()
     }
 }
