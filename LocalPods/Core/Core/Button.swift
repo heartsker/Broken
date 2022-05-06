@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 public enum Button: String, CaseIterable {
     case zero
     case one
@@ -43,7 +44,9 @@ extension Button: CustomStringConvertible {
         case .sign :
             return "􀍶"
         default :
+
             return String(Button.allcases.map { $0.rawValue }.firstIndex(of: self.rawValue) ?? 0)
+
         }
     }
 }

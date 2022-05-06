@@ -56,3 +56,4 @@ class LevelGenerator {
         return Level(number: number, difficulty: difficulty, start: start, finish: finish, best_score: best_score, buttons: buttonsSet) ?? nil
     }
 }
+
