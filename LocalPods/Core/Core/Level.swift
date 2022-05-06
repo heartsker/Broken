@@ -35,7 +35,7 @@ extension Level: CustomStringConvertible {
         if story != nil {
             str += "Story: \(story ?? "")\n"
         }
-        str += "You started from \(startNumber), and the goal is \(finishNumber)!"
+        str += "You started from \(start), and the goal is \(finish)!"
         return str
     }
 }
