@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Core
 
 class LevelManager {
     private var levels: [Int: Level]
