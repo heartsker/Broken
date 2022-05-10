@@ -33,7 +33,7 @@ class LevelGenerator {
                       let buttons = level["buttons"] as? [String],
                       let start = level["start"] as? Int,
                       let finish = level["finish"] as? Int,
-                      let best_score = level["best_score"] as? Int else {
+                      let bestScore = level["bestScore"] as? Int else {
                     return nil
                 }
                 let number = i
@@ -42,7 +42,7 @@ class LevelGenerator {
                                           difficulty: difficulty,
                                           start: start,
                                           finish: finish,
-                                          best_score: best_score,
+                                          bestScore: bestScore,
                                           buttons: buttons) else {
                     return nil
                 }
@@ -56,16 +56,22 @@ class LevelGenerator {
         }
     }
 
-    func convert(number: Int, difficulty: Double, start: Int, finish: Int, best_score: Int, buttons: [String]) -> Level? {
+    func convert(number: Int, difficulty: Double, start: Int, finish: Int,
+                 bestScore: Int, buttons: [String]) -> Level? {
 
         func stringToButton(_ string: String) -> Button? {
             Button(rawValue: string)
         }
-        guard let levelButtons = buttons.map({stringToButton($0)}) as? [Button] else {
-            return nil
+        var levelButtons: [Button] = []
+        for string in buttons {
+            guard let button = stringToButton(string) else {
+                return nil}
+            levelButtons.append(button)
         }
+
         let buttonsSet = ButtonsSet(activeButtons: levelButtons)
 
-        return Level(number: number, difficulty: difficulty, start: start, finish: finish, best_score: best_score, buttons: buttonsSet)
+        return Level(number: number, difficulty: difficulty, start: start, finish: finish,
+                     bestScore: bestScore, buttons: buttonsSet)
     }
 }
