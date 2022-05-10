@@ -56,4 +56,4 @@ jobs:
           key: ${{ runner.os }}-cache-${{ github.run_id }}
       - name: Build
         run: |
-          xcodebuild -scheme "TheBean" -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max' -workspace TheBean.xcworkspace -quiet
+          xcodebuild -scheme "Broken" -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max' -workspace Broken.xcworkspace -quiet
