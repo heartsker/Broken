@@ -13,6 +13,9 @@ target 'Broken' do
   # Linter
   pod 'SwiftLint'
 
+  # Snapkit
+  pod 'SnapKit'
+
   # Local Pods
   pod 'LevelGenerator', :path => 'LocalPods/LevelGenerator'
 

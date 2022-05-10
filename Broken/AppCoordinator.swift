@@ -18,13 +18,13 @@ class AppCoordinator: PCoordinator {
     }
 
     func start() {
-        let vc = HomeViewController()
+        let vc = LevelViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
 
     func showLevels () {
-        let vc = LevelsViewController()
+        let vc = LevelViewController()
         navigationController.pushViewController(vc, animated: false)
     }
 
