@@ -1,10 +1,18 @@
 PODS:
-  - LevelGenerator (0.1.0)
+
+  - Core (0.1.0)
+  - LevelGenerator (0.1.0):
+    - Core
+  - LevelManager (0.1.0):
+    - Core
+    - LevelGenerator
   - SnapKit (5.6.0)
   - SwiftLint (0.47.1)
 
 DEPENDENCIES:
+  - Core (from `LocalPods/Core`)
   - LevelGenerator (from `LocalPods/LevelGenerator`)
+  - LevelManager (from `LocalPods/LevelManager`)
   - SnapKit
   - SwiftLint
 
@@ -14,14 +22,20 @@ SPEC REPOS:
     - SwiftLint
 
 EXTERNAL SOURCES:
+  Core:
+    :path: LocalPods/Core
   LevelGenerator:
     :path: LocalPods/LevelGenerator
+  LevelManager:
+    :path: LocalPods/LevelManager
 
 SPEC CHECKSUMS:
-  LevelGenerator: a6559a8adf91e17a8c04d82960cb40ce0e39fc9a
+  Core: 26cd3a81f5b916a5088953c839615c141ccdfac8
+  LevelGenerator: c35fe2617669cfbfcdb98e77951500540b3315aa
+  LevelManager: 9e702f70f2457927e31dc75659e23522cf09a4e5
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
 
-PODFILE CHECKSUM: 7b9d62cf32429d74892c6440f0356b46219285fe
+PODFILE CHECKSUM: c90e954ac90a9594a10c6c5e866cbf92904ebd3e
 
 COCOAPODS: 1.11.3

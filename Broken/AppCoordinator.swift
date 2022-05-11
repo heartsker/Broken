@@ -7,9 +7,11 @@
 
 import UIKit
 
-class AppCoordinator: PCoordinator {
 
-    var childCoordinators: [PCoordinator]
+class AppCoordinator: ICoordinator {
+
+    var childCoordinators: [ICoordinator]
+
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -18,6 +20,7 @@ class AppCoordinator: PCoordinator {
     }
 
     func start() {
+
         let vc = LevelViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
@@ -26,6 +29,7 @@ class AppCoordinator: PCoordinator {
     func showLevels () {
         let vc = LevelViewController()
         navigationController.pushViewController(vc, animated: false)
+
     }
 
  }

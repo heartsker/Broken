@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Core
 
 class LevelViewController: UIViewController {
 
@@ -39,15 +40,11 @@ class LevelViewController: UIViewController {
     }
 
     var buttons = [UIButton]()
-// for buttons all cases
+// for buttons all cases. custom string convertable
     private func createButtons () {
-        for i in 0..<9 {
-            buttons.append(button(for: "\(i)"))
+        for value in Button.allCases {
+            buttons.append(button(for: value.description))
         }
-        buttons.append(button(for: "*"))
-        buttons.append(button(for: "/"))
-        buttons.append(button(for: "+"))
-        buttons.append(button(for: "-"))
     }
 
     override func viewDidLoad() {
@@ -65,7 +62,7 @@ extension LevelViewController {
 
     private func setupSubviews() {
         view.addSubview(mainLabel)
-        view.addSubview(button(for: "1"))
+        view.addSubview(button(for: "1")) // здесь пробегаемся по всему массиву
     }
 
     private func setupButtons () {

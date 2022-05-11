@@ -1,21 +1,21 @@
-name: ${CURRENT_PROJECT}
+name: Broken
 options:
   bundleIdPrefix: ${BUNDLE_ID_PREFIX}
   deploymentTarget:
     iOS: 13.0
 targets:
-  ${CURRENT_PROJECT}:
+  Broken:
     type: application
     platform: iOS
     sources: 
-      - path: ${CURRENT_PROJECT}
+      - path: Broken
     settings:
       DEVELOPMENT_TEAM: ${DEVELOPMENT_TEAM}
     info:
-      path: ${CURRENT_PROJECT}/Resources/Info.plist
+      path: Broken/Resources/Info.plist
       properties:
         CFBundleExecutable: "$(EXECUTABLE_NAME)"
-        CFBundleIdentifier: ${BUNDLE_ID_PREFIX}.${CURRENT_PROJECT}
+        CFBundleIdentifier: ${BUNDLE_ID_PREFIX}.Broken
         CFBundleVersion: "1.0"
         CFBundleShortVersionString: "1.0"
         UIApplicationSceneManifest:
@@ -28,8 +28,14 @@ targets:
         UILaunchStoryboardName: LaunchScreen
         UIRequiresFullScreen: true
         UISupportedInterfaceOrientations: []
-    preBuildScripts:
-      - script: Pods/Swiftlint/swiftlint --fix
+    postCompileScripts:
+      - script: |
+          if [ -z "$CI" ]; then
+          ${PODS_ROOT}/SwiftLint/swiftlint --fix
+          fi
         name: SwiftlintFix
-      - script: Pods/Swiftlint/swiftlint
+      - script: |
+          if [ -z "$CI" ]; then
+          ${PODS_ROOT}/SwiftLint/swiftlint
+          fi
         name: Swiftlint
