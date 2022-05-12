@@ -39,7 +39,7 @@ class LevelViewController: UIViewController {
     @objc func pressed () {
     }
 
-    var buttons = [UIButton]()    
+    var buttons: [UIButton] = []
 
     private func createButtons () {
         for value in Button.allCases {

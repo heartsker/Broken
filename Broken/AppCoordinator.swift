@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class AppCoordinator: ICoordinator {
 
     var childCoordinators: [ICoordinator]

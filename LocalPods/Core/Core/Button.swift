@@ -25,7 +25,7 @@ public enum Button: String, CaseIterable {
     case point
     case sign
 }
-    
+
 extension Button: CustomStringConvertible {
    public var description: String {
         switch self {
@@ -50,6 +50,6 @@ extension Button: CustomStringConvertible {
     }
 }
 
-//for value in Button.allCases {
+// for value in Button.allCases {
 //    print(value)
-//}
+// }
