@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// swiftlint:disable missing_docs
 public class Level {
     public private(set) var number: Int
     var name: String
@@ -14,17 +14,18 @@ public class Level {
     var difficulty: Double
     var start: Int
     var finish: Int
-    var best_score: Int
+    var bestScore: Int
     var buttons: ButtonsSet
 
-    public init(number: Int, name: String = "", story: String? = nil, difficulty: Double, start: Int, finish: Int, best_score: Int, buttons: ButtonsSet) {
+    public init(number: Int, name: String = "", story: String? = nil, difficulty: Double,
+                start: Int, finish: Int, bestScore: Int, buttons: ButtonsSet) {
         self.number = number
         self.name = name
         self.story = story
         self.difficulty = difficulty
         self.start = start
         self.finish = finish
-        self.best_score = best_score
+        self.bestScore = bestScore
         self.buttons = ButtonsSet()
     }
 }

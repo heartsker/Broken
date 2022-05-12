@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Set of Buttons
 public class ButtonsSet {
     var buttons: [Button: Bool]
     init(all: Bool = true) {
@@ -15,6 +16,8 @@ public class ButtonsSet {
             buttons[buttonCase] = all
         }
     }
+    /// Initializes ButtonsSet
+    /// - Parameter activeButtons: Buttons to enable
    public init(activeButtons: [Button]) {
         buttons = [:]
         for button in Button.allCases {

@@ -16,8 +16,8 @@ class LevelManager {
     }
 
     func add(level: Level) {
-        if levels[level.number] == nil {
-            levels[level.number] = level
+        if levels[Int(level.number)] == nil {
+            levels[Int(level.number)] = level
         }
     }
 

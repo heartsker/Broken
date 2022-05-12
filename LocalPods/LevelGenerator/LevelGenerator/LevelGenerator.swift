@@ -23,37 +23,55 @@ class LevelGenerator {
 
     func parse(data: Data) throws -> [Level]? {
         do {
-            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                var levels: [Level] = []
-                for i in 1...json.count {
-                    guard let level = json["\(i)"] as? [String: Any],
-                          let difficulty = level["difficulty"] as? Double,
-                          let buttons = level["buttons"] as? [String],
-                          let start = level["start"] as? Int,
-                          let finish = level["finish"] as? Int,
-                          let best_score = level["best_score"] as? Int else {
-                              return nil
-                          }
-                    let number = i
-
-                    levels.append(convert(number: number, difficulty: difficulty, start: start, finish: finish, best_score: best_score, buttons: buttons))
-                }
+            guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+                return nil
             }
-        } catch let error as NSError {
-            print("Failed to load")
+            var levels: [Level] = []
+            for i in 1...json.count {
+                guard let level = json["\(i)"] as? [String: Any],
+                      let difficulty = level["difficulty"] as? Double,
+                      let buttons = level["buttons"] as? [String],
+                      let start = level["start"] as? Int,
+                      let finish = level["finish"] as? Int,
+                      let bestScore = level["bestScore"] as? Int else {
+                    return nil
+                }
+                let number = i
+
+                guard let level = convert(number: number,
+                                          difficulty: difficulty,
+                                          start: start,
+                                          finish: finish,
+                                          bestScore: bestScore,
+                                          buttons: buttons) else {
+                    return nil
+                }
+
+                levels.append(level)
+            }
+            return levels
+        } catch {
+            print(error.localizedDescription)
+            return nil
         }
     }
 
-    func convert(number: Int, difficulty: Double, start: Int, finish: Int, best_score: Int, buttons: [String]) -> Level? {
+    func convert(number: Int, difficulty: Double, start: Int, finish: Int,
+                 bestScore: Int, buttons: [String]) -> Level? {
 
         func stringToButton(_ string: String) -> Button? {
             Button(rawValue: string)
         }
-        guard let levelButtons = buttons.map({stringToButton($0)}) as? [Button],
-        let buttonsSet = ButtonsSet(activeButtons: levelButtons) as? [Button] else {
-            return nil
+        var levelButtons: [Button] = []
+        for string in buttons {
+            guard let button = stringToButton(string) else {
+                return nil}
+            levelButtons.append(button)
         }
-        return Level(number: number, difficulty: difficulty, start: start, finish: finish, best_score: best_score, buttons: buttons) ?? nil
+
+        let buttonsSet = ButtonsSet(activeButtons: levelButtons)
+
+        return Level(number: number, difficulty: difficulty, start: start, finish: finish,
+                     bestScore: bestScore, buttons: buttonsSet)
     }
 }
-

@@ -39,8 +39,8 @@ class LevelViewController: UIViewController {
     @objc func pressed () {
     }
 
-    var buttons = [UIButton]()
-// for buttons all cases. custom string convertable
+    var buttons = [UIButton]()    
+
     private func createButtons () {
         for value in Button.allCases {
             buttons.append(button(for: value.description))
