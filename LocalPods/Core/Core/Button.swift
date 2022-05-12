@@ -49,3 +49,7 @@ extension Button: CustomStringConvertible {
         }
     }
 }
+
+// for value in Button.allCases {
+//    print(value)
+// }

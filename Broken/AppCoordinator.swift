@@ -10,6 +10,7 @@ import UIKit
 class AppCoordinator: ICoordinator {
 
     var childCoordinators: [ICoordinator]
+
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -18,14 +19,16 @@ class AppCoordinator: ICoordinator {
     }
 
     func start() {
-        let controller = HomeViewController()
-        controller.coordinator = self
-        navigationController.pushViewController(controller, animated: false)
+
+        let vc = LevelViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
 
     func showLevels () {
-        let controller = LevelsViewController()
-        navigationController.pushViewController(controller, animated: false)
+        let vc = LevelViewController()
+        navigationController.pushViewController(vc, animated: false)
+
     }
 
  }

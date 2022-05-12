@@ -5,10 +5,11 @@
 //  Created by Daniel Pustotin on 28.03.2022.
 //
 
- import UIKit
+import UIKit
 import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
 // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentCloudKitContainer = {
         let container = NSPersistentCloudKitContainer(name: "Broken")
@@ -32,9 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         true
+
     }
 
     // MARK: UISceneSession Lifecycle
@@ -47,6 +50,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-
 }
-

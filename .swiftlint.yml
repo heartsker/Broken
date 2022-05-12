@@ -12,6 +12,7 @@ identifier_name:
     - i
     - to
     - id
+    - vc
 included:
   - Broken
   - LocalPods
