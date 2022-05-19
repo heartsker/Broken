@@ -13,6 +13,8 @@ class LevelViewController: UIViewController {
 
     var coordinator: AppCoordinator?
 
+    var buttons: [Button] = Button.allCases
+
     lazy private var mainLabel: UILabel = {
         let label = UILabel()
         label.text = "0"
@@ -24,28 +26,9 @@ class LevelViewController: UIViewController {
         return label
     }()
 
-    private func button (for title: String) -> UIButton {
-        let numbersButton = UIButton()
-        numbersButton.setTitleColor(.white, for: .normal)
-        numbersButton.backgroundColor = .darkGray
-        numbersButton.frame = CGRect(x: 15, y: 30, width: 100, height: 100)
-        numbersButton.addTarget(self, action: #selector(pressed), for: .touchUpInside)
-        numbersButton.setTitle(title, for: .normal)
-        view.addSubview(numbersButton)
-        return numbersButton
-
-    }
-
-    @objc func pressed () {
-    }
-
-    var buttons: [UIButton] = []
-
-    private func createButtons () {
-        for value in Button.allCases {
-            buttons.append(button(for: value.description))
-        }
-    }
+    lazy private var pad: UIView = {
+        NumberPadView(buttons: buttons)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +45,7 @@ extension LevelViewController {
 
     private func setupSubviews() {
         view.addSubview(mainLabel)
-        view.addSubview(button(for: "1")) // здесь пробегаемся по всему массиву
+        view.addSubview(pad)
     }
 
     private func setupButtons () {
@@ -72,11 +55,11 @@ extension LevelViewController {
             make.height.equalTo(mainLabel.snp.width).dividedBy(2)
         }
 
-//        numbersButton.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//            make.width.equalTo(300)
-//            make.height.equalTo(numbersButton.snp.width).dividedBy(2)
-//        }
+        pad.snp.makeConstraints { make in
+            make.verticalEdges.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.top.equalTo(mainLabel.snp.bottom)
+        }
     }
 
     private func setupAppearance() {
