@@ -8,10 +8,25 @@
 import Foundation
 import Core
 
-class LevelGenerator {
-    func readLocalFile(forName name: String) -> Data? {
+public class LevelGenerator {
+
+    public static func getLevels() -> [Level] {
+        guard let data = readLocalFile(forName: "levels"),
+              let levels = parse(data: data) else {
+                  return []
+              }
+        return levels
+    }
+   private static func resources() -> Bundle {
+       let bundle = Bundle(for: Self.self)
+            let url = bundle.url(forResource: "LevelGeneratorResources", withExtension: "bundle") ??
+                      Bundle.main.resourceURL ?? URL(fileURLWithPath: "")
+            let resourcesBundle = Bundle(url: url) ?? Bundle.main
+            return resourcesBundle
+        }
+    private static func readLocalFile(forName name: String) -> Data? {
         do {
-            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"),
+            if let bundlePath = LevelGenerator.resources().path(forResource: name, ofType: "json"),
                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                 return jsonData
             }
@@ -21,7 +36,7 @@ class LevelGenerator {
         return nil
     }
 
-    func parse(data: Data) throws -> [Level]? {
+   private static func parse(data: Data) -> [Level]? {
         do {
             guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
                 return nil
@@ -56,8 +71,12 @@ class LevelGenerator {
         }
     }
 
-    func convert(number: Int, difficulty: Double, start: Int, finish: Int,
-                 bestScore: Int, buttons: [String]) -> Level? {
+    private static func convert(number: Int,
+                                difficulty: Double,
+                                start: Int,
+                                finish: Int,
+                                bestScore: Int,
+                                buttons: [String]) -> Level? {
 
         func stringToButton(_ string: String) -> Button? {
             Button(rawValue: string)

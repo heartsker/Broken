@@ -13,6 +13,8 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
 
   spec.source_files = "#{spec.name}/**/*.{swift}"
-
+  spec.resource_bundles = {
+    "#{spec.name}Resources" => ["#{spec.name}/**/*.{json}"]
+  }
   spec.dependency "Core"
 end

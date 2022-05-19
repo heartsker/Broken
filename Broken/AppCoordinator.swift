@@ -20,7 +20,7 @@ class AppCoordinator: ICoordinator {
 
     func start() {
 
-        let vc = LevelViewController()
+        let vc = LevelsViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
