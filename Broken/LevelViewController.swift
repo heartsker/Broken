@@ -11,6 +11,8 @@ import Core
 
 class LevelViewController: UIViewController {
 
+    var holder = UIView()
+
     var coordinator: AppCoordinator?
 
     lazy private var mainLabel: UILabel = {
@@ -24,63 +26,80 @@ class LevelViewController: UIViewController {
         return label
     }()
 
-    private func button (for title: String) -> UIButton {
-        let numbersButton = UIButton()
-        numbersButton.setTitleColor(.white, for: .normal)
-        numbersButton.backgroundColor = .darkGray
-        numbersButton.frame = CGRect(x: 15, y: 30, width: 100, height: 100)
-        numbersButton.addTarget(self, action: #selector(pressed), for: .touchUpInside)
-        numbersButton.setTitle(title, for: .normal)
-        view.addSubview(numbersButton)
-        return numbersButton
+    private func buttonsPad () {
+        let fontSize: CGFloat = 25
+        let buttonSize: CGFloat = view.frame.size.width / 4
 
+        let startButton = UIButton(frame: CGRect(x: 10, y: 15, width: buttonSize*3, height: buttonSize))
+        startButton.setTitleColor(.black, for: .normal)
+        startButton.backgroundColor = .white
+        startButton.setTitle("0", for: .normal)
+        startButton.titleLabel?.font = UIFont(name: "Helvetica", size: fontSize)
+        startButton.tag = 1
+        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
+
+        for value in 0..<9 {
+            let buttonsRow = UIButton(frame: CGRect(x: buttonSize * CGFloat(value),
+                                                    y: holder.frame.size.height-(buttonSize*2),
+                                                    width: buttonSize-3,
+                                                    height: buttonSize-3))
+            buttonsRow.setTitleColor(.black, for: .normal)
+            buttonsRow.backgroundColor = .gray
+            buttonsRow.setTitle("\(value)", for: .normal)
+            buttonsRow.tag = value+2
+            holder.addSubview(buttonsRow)
+            buttonsRow.addTarget(self, action: #selector (numberPressed(_:)), for: .touchUpInside)
+        }
     }
 
-    @objc func pressed () {
+    @objc func numberPressed (_ sender: UIButton) {
+        _ = sender.tag - 1
+    }
+
+    @objc func startButtonTapped() {
     }
 
     var buttons: [UIButton] = []
 
-    private func createButtons () {
-        for value in Button.allCases {
-            buttons.append(button(for: value.description))
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        buttonsPad()
     }
 }
 
 extension LevelViewController {
     private func setup() {
         setupSubviews()
-        setupButtons()
+        setupConstraints()
         setupAppearance()
     }
 
     private func setupSubviews() {
         view.addSubview(mainLabel)
-        view.addSubview(button(for: "1")) // здесь пробегаемся по всему массиву
+        view.addSubview(holder)
+        // здесь пробегаемся по всему массиву
     }
 
-    private func setupButtons () {
+    private func setupConstraints () {
         mainLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.width.equalTo(300)
             make.height.equalTo(mainLabel.snp.width).dividedBy(2)
         }
-
-//        numbersButton.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//            make.width.equalTo(300)
-//            make.height.equalTo(numbersButton.snp.width).dividedBy(2)
-//        }
+        holder.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalTo(500)
+            make.bottom.equalToSuperview()
+        }
     }
 
     private func setupAppearance() {
         view.backgroundColor = .white
     }
-
 }
