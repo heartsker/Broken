@@ -9,12 +9,18 @@ import SwiftUI
 import LevelGenerator
 import Core
 
+let level1 = Level(number: 1, name: "a", story: nil,
+                   difficulty: 2.0, start: 1, finish: 10, bestScore: 10, buttons: ButtonsSet(activeButtons: []))
+let level2 = Level(number: 2, name: "a", story: nil,
+                   difficulty: 2.0, start: 1, finish: 10, bestScore: 10, buttons: ButtonsSet(activeButtons: []))
+let data: [Level] = [level1, level2]
+
 class LevelsViewController: UIViewController {
     var coordinator: AppCoordinator?
 
     lazy private var tableView = UITableView(frame: .zero)
 
-    let table: [Level] = LevelGenerator.getLevels()
+    let table: [Level] = data
 
     override func viewDidLoad() {
         super.viewDidLoad()

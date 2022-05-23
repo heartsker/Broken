@@ -48,7 +48,7 @@ public class LevelGenerator {
                       let buttons = level["buttons"] as? [String],
                       let start = level["start"] as? Int,
                       let finish = level["finish"] as? Int,
-                      let bestScore = level["bestScore"] as? Int else {
+                      let bestScore = level["best_Score"] as? Int else {
                     return nil
                 }
                 let number = i
