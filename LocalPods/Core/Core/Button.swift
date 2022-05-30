@@ -22,7 +22,6 @@ public enum Button: String, CaseIterable {
     case minus
     case multiply
     case divide
-    case point
     case sign
 }
 
@@ -38,8 +37,6 @@ extension Button: CustomStringConvertible {
             return "*"
         case .divide :
             return "􀅿"
-        case .point :
-            return "."
         case .sign :
             return "􀍶"
         default :

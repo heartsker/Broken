@@ -10,6 +10,8 @@ import Core
 
 public class LevelGenerator {
 
+    /// Get levels from json
+    /// - Returns: array of levels
     public static func getLevels() -> [Level] {
         guard let data = readLocalFile(forName: "levels"),
               let levels = parse(data: data) else {
@@ -48,7 +50,7 @@ public class LevelGenerator {
                       let buttons = level["buttons"] as? [String],
                       let start = level["start"] as? Int,
                       let finish = level["finish"] as? Int,
-                      let bestScore = level["best_Score"] as? Int else {
+                      let bestScore = level["best_score"] as? Int else {
                     return nil
                 }
                 let number = i
@@ -78,9 +80,6 @@ public class LevelGenerator {
                                 bestScore: Int,
                                 buttons: [String]) -> Level? {
 
-        func stringToButton(_ string: String) -> Button? {
-            Button(rawValue: string)
-        }
         var levelButtons: [Button] = []
         for string in buttons {
             guard let button = stringToButton(string) else {
@@ -92,5 +91,41 @@ public class LevelGenerator {
 
         return Level(number: number, difficulty: difficulty, start: start, finish: finish,
                      bestScore: bestScore, buttons: buttonsSet)
+    }
+}
+
+private     func stringToButton(_ string: String) -> Button? {
+    switch string {
+    case "0":
+        return .zero
+    case "1":
+        return .one
+    case "2":
+        return .two
+    case "3":
+        return .three
+    case "4":
+        return .four
+    case "5":
+        return .five
+    case "6":
+        return .six
+    case "7":
+        return .seven
+    case "8":
+        return .eight
+    case "9":
+        return .nine
+    case "+":
+        return .plus
+    case "-":
+        return .minus
+    case "*":
+        return .multiply
+    case "/":
+        return .divide
+    case "*(-1)":
+        return .sign
+    default: return nil
     }
 }

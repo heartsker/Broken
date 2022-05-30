@@ -20,14 +20,14 @@ class LevelsViewController: UIViewController {
 
     lazy private var tableView = UITableView(frame: .zero)
 
-    let table: [Level] = data
+    let table: [Level] = LevelGenerator.getLevels()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(LevelCellView.self, forCellReuseIdentifier: "LevelCellView")
         view.backgroundColor = UIColor.orange
         title = "LevelsView"
-        print(table)
+        tableView.dataSource = self
     }
 }
 // UITableView
@@ -59,7 +59,8 @@ extension LevelsViewController {
     }
 
 }
-
+// отсюда
+    // table.count не меняется
 extension LevelsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         table.count
@@ -68,6 +69,7 @@ extension LevelsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LevelCellView", for: indexPath)
         as? LevelCellView ?? LevelCellView()
         cell.textLabel?.text = String(table[indexPath.row].number)
+        print(cell.textLabel?.text)
         return cell
     }
 }
