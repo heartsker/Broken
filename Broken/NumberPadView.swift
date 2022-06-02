@@ -9,7 +9,7 @@ import UIKit
 import Core
 
 class NumberPadView: UIView {
-     var configuration: [Button]
+    var configuration: [Button]
 
      init(buttons configuration: [Button]) {
          self.configuration = configuration
@@ -28,8 +28,9 @@ class NumberPadView: UIView {
      private func getButton(with title: String) -> UIButton {
          let button = UIButton()
          button.setTitleColor(.white, for: .normal)
-         button.backgroundColor = .darkGray
-         button.frame = CGRect(x: 15, y: 30, width: 100, height: 100)
+         button.backgroundColor = .blue
+         button.frame = CGRect(x: 15, y: 15, width: 100, height: 75)
+         button.layer.cornerRadius = 10
          button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
          button.setTitle(title, for: .normal)
          return button
@@ -59,9 +60,10 @@ class NumberPadView: UIView {
              for col in 0 ..< 4 {
                  let idx = row * 4 + col
                  buttons[idx].snp.makeConstraints { make in
-                     make.top.equalToSuperview().offset(row * 5 + row * 100)
-                     make.left.equalToSuperview().offset(col * 5 + col * 100)
-                     make.width.height.equalTo(100)
+                     make.bottom.equalToSuperview().offset(-row * 5 - row * 50)
+                     make.left.equalToSuperview().offset((col + 1) * 5 + col * 100)
+                     make.width.equalTo(100)
+                     make.height.equalTo(50)
                  }
              }
          }
