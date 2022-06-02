@@ -8,6 +8,7 @@
 import SwiftUI
 import LevelGenerator
 import Core
+import SnapKit
 
 let level1 = Level(number: 1, name: "a", story: nil,
                    difficulty: 2.0, start: 1, finish: 10, bestScore: 10, buttons: ButtonsSet(activeButtons: []))
@@ -67,13 +68,31 @@ extension LevelsViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LevelCellView", for: indexPath)
-        as? LevelCellView ?? LevelCellView()
-        cell.textLabel?.text = String(table[indexPath.row].number)
-        print(cell.textLabel?.text)
+        as? LevelCellView ?? LevelCellView(level: table[indexPath.row])
         return cell
     }
 }
 
 class LevelCellView: UITableViewCell {
+    var level: Level
+    private lazy var name: UILabel = {
+        UILabel()
+    }()
+    init(level: Level) {
+        self.level = level
+        super.init(style: .default, reuseIdentifier: "LevelCellView")
+        self.name.text = String(level.number)
+        snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            make.height.equalTo(100)
+        }
+        addSubview(name)
+        name.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
