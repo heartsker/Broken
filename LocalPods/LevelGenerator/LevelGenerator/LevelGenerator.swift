@@ -94,7 +94,8 @@ public class LevelGenerator {
     }
 }
 
-private     func stringToButton(_ string: String) -> Button? {
+// swiftlint:disable:next cyclomatic_complexity
+private func stringToButton(_ string: String) -> Button? {
     switch string {
     case "0":
         return .zero

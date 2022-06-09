@@ -19,16 +19,21 @@ let data: [Level] = [level1, level2]
 class LevelsViewController: UIViewController {
     var coordinator: AppCoordinator?
 
-    lazy private var tableView = UITableView(frame: .zero)
+    lazy private var tableView = UITableView()
 
     let table: [Level] = LevelGenerator.getLevels()
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
+
         tableView.register(LevelCellView.self, forCellReuseIdentifier: "LevelCellView")
         view.backgroundColor = UIColor.orange
         title = "LevelsView"
         tableView.dataSource = self
+        tableView.delegate = self
+
+        setup()
     }
 }
 // UITableView
@@ -47,12 +52,6 @@ extension LevelsViewController {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-
-//        numbersButton.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//            make.width.equalTo(300)
-//            make.height.equalTo(numbersButton.snp.width).dividedBy(2)
-//        }
     }
 
     private func setupAppearance() {
@@ -60,39 +59,53 @@ extension LevelsViewController {
     }
 
 }
-// отсюда
-    // table.count не меняется
-extension LevelsViewController: UITableViewDataSource {
+
+extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         table.count
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LevelCellView", for: indexPath)
-        as? LevelCellView ?? LevelCellView(level: table[indexPath.row])
+//        swiftlint:disable:next force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LevelCellView", for: indexPath) as! LevelCellView
+        cell.level = table[indexPath.row]
+
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Was pressed cell No. \(indexPath.row)")
     }
 }
 
 class LevelCellView: UITableViewCell {
-    var level: Level
+    var level: Level! {
+        didSet {
+            setup()
+        }
+    }
+
     private lazy var name: UILabel = {
         UILabel()
     }()
-    init(level: Level) {
-        self.level = level
-        super.init(style: .default, reuseIdentifier: "LevelCellView")
-        self.name.text = String(level.number)
-        snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            make.height.equalTo(100)
-        }
-        addSubview(name)
-        name.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setup() {
+        contentView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            make.height.equalTo(50)
+        }
+        self.name.text = String(level.number)
+        contentView.addSubview(name)
+        name.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 }
