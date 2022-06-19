@@ -89,6 +89,14 @@ class LevelCellView: UITableViewCell {
         UILabel()
     }()
 
+    private lazy var difficulty: UILabel = {
+        UILabel()
+    }()
+
+    private lazy var bestScore: UILabel = {
+        UILabel()
+    }()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -104,8 +112,35 @@ class LevelCellView: UITableViewCell {
         }
         self.name.text = String(level.number)
         contentView.addSubview(name)
+        self.name.backgroundColor = .blue
+
         name.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.width.equalToSuperview().dividedBy(6)
+            make.top.bottom.equalToSuperview()
+            make.left.equalToSuperview().offset(50)
+            make.right.equalToSuperview()
         }
+
+        self.difficulty.text = String(level.difficulty)
+        contentView.addSubview(difficulty)
+        self.difficulty.backgroundColor = .red
+
+        difficulty.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(3)
+            make.top.bottom.equalToSuperview()
+            make.top.equalToSuperview()
+            make.left.equalTo(name.snp.right)
+            make.right.equalToSuperview()
+        }
+
+        self.bestScore.text = String(level.bestScore)
+        contentView.addSubview(bestScore)
+
+//        bestScore.snp.makeConstraints { make in
+//            make.top.bottom.equalToSuperview()
+//            make.top.equalToSuperview()
+//            make.left
+//            make.right.equalToSuperview()
+//        }
     }
 }
