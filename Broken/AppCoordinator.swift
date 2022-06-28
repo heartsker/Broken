@@ -31,7 +31,7 @@ class AppCoordinator: ICoordinator {
         navigationController.pushViewController(vc, animated: false)
 
     }
-    
+
     func showLevelView(level: Level) {
         let vc = LevelViewController()
         navigationController.pushViewController(vc, animated: false)
