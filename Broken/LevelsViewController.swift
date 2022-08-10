@@ -106,15 +106,6 @@ class LevelCellView: UITableViewCell {
         getLabel()
     }()
 
-    private lazy var profileImageView: UIImageView = {
-             let img = UIImageView()
-             img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
-             img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-             img.layer.cornerRadius = 35
-             img.clipsToBounds = true
-            return img
-         }()
-
     func getLabel() -> UILabel {
         let label = UILabel()
         label.textColor = .white
@@ -135,14 +126,8 @@ class LevelCellView: UITableViewCell {
     private func setup() {
         contentView.snp.makeConstraints { make in
             make.width.equalToSuperview()
-            make.height.equalTo(50)
+            make.height.equalTo(60)
         }
-
-        contentView.addSubview(profileImageView)
-        self.profileImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
-        self.profileImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant: 10).isActive = true
-        self.profileImageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        self.profileImageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
 
         self.name.text = String(level.number)
         contentView.addSubview(name)
@@ -150,7 +135,8 @@ class LevelCellView: UITableViewCell {
 
         name.snp.makeConstraints { make in
             make.width.equalToSuperview().dividedBy(5.5)
-            make.top.bottom.equalToSuperview()
+            make.top.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview().offset(-5)
             make.left.equalToSuperview().offset(15)
             make.right.equalToSuperview()
         }
@@ -161,7 +147,8 @@ class LevelCellView: UITableViewCell {
 
         difficulty.snp.makeConstraints { make in
             make.width.equalToSuperview().dividedBy(2.2)
-            make.top.bottom.equalToSuperview()
+            make.top.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview().offset(-5)
             make.left.equalTo(name.snp.right)
 
         }
@@ -171,7 +158,8 @@ class LevelCellView: UITableViewCell {
         self.bestScore.backgroundColor = backGrColor
 
         bestScore.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
+            make.top.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview().offset(-5)
             make.left.equalTo(difficulty.snp.right)
             make.right.equalToSuperview().offset(-15)
         }
