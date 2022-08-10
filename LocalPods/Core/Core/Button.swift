@@ -22,7 +22,6 @@ public enum Button: String, CaseIterable {
     case minus
     case multiply
     case divide
-    case point
     case sign
 }
 

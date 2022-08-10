@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Core
 
 class AppCoordinator: ICoordinator {
 
@@ -19,7 +20,6 @@ class AppCoordinator: ICoordinator {
     }
 
     func start() {
-
         let vc = MainViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
@@ -32,6 +32,11 @@ class AppCoordinator: ICoordinator {
     }
     func showSettings () {
         let vc = SettingsViewController()
+        navigationController.pushViewController(vc, animated: false)
+    }
+
+    func showLevelView(level: Level) {
+        let vc = LevelViewController()
         navigationController.pushViewController(vc, animated: false)
     }
 

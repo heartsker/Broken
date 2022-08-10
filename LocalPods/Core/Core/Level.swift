@@ -9,13 +9,13 @@ import Foundation
 // swiftlint:disable missing_docs
 public class Level {
     public private(set) var number: Int
-    var name: String
-    var story: String?
-    var difficulty: Double
+    public private(set) var name: String
+    public private(set) var story: String?
+    public private(set) var difficulty: Double
     var start: Int
     var finish: Int
-    var bestScore: Int
-    var buttons: ButtonsSet
+    public private(set) var bestScore: Int
+    public private(set) var buttons: ButtonsSet
 
     public init(number: Int, name: String = "", story: String? = nil, difficulty: Double,
                 start: Int, finish: Int, bestScore: Int, buttons: ButtonsSet) {

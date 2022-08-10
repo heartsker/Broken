@@ -8,10 +8,27 @@
 import Foundation
 import Core
 
-class LevelGenerator {
-    func readLocalFile(forName name: String) -> Data? {
+public class LevelGenerator {
+
+    /// Get levels from json
+    /// - Returns: array of levels
+    public static func getLevels() -> [Level] {
+        guard let data = readLocalFile(forName: "levels"),
+              let levels = parse(data: data) else {
+                  return []
+              }
+        return levels
+    }
+   private static func resources() -> Bundle {
+       let bundle = Bundle(for: Self.self)
+            let url = bundle.url(forResource: "LevelGeneratorResources", withExtension: "bundle") ??
+                      Bundle.main.resourceURL ?? URL(fileURLWithPath: "")
+            let resourcesBundle = Bundle(url: url) ?? Bundle.main
+            return resourcesBundle
+        }
+    private static func readLocalFile(forName name: String) -> Data? {
         do {
-            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"),
+            if let bundlePath = LevelGenerator.resources().path(forResource: name, ofType: "json"),
                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                 return jsonData
             }
@@ -21,7 +38,7 @@ class LevelGenerator {
         return nil
     }
 
-    func parse(data: Data) throws -> [Level]? {
+   private static func parse(data: Data) -> [Level]? {
         do {
             guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
                 return nil
@@ -33,7 +50,7 @@ class LevelGenerator {
                       let buttons = level["buttons"] as? [String],
                       let start = level["start"] as? Int,
                       let finish = level["finish"] as? Int,
-                      let bestScore = level["bestScore"] as? Int else {
+                      let bestScore = level["best_score"] as? Int else {
                     return nil
                 }
                 let number = i
@@ -56,12 +73,13 @@ class LevelGenerator {
         }
     }
 
-    func convert(number: Int, difficulty: Double, start: Int, finish: Int,
-                 bestScore: Int, buttons: [String]) -> Level? {
+    private static func convert(number: Int,
+                                difficulty: Double,
+                                start: Int,
+                                finish: Int,
+                                bestScore: Int,
+                                buttons: [String]) -> Level? {
 
-        func stringToButton(_ string: String) -> Button? {
-            Button(rawValue: string)
-        }
         var levelButtons: [Button] = []
         for string in buttons {
             guard let button = stringToButton(string) else {
@@ -73,5 +91,42 @@ class LevelGenerator {
 
         return Level(number: number, difficulty: difficulty, start: start, finish: finish,
                      bestScore: bestScore, buttons: buttonsSet)
+    }
+}
+
+// swiftlint:disable:next cyclomatic_complexity
+private func stringToButton(_ string: String) -> Button? {
+    switch string {
+    case "0":
+        return .zero
+    case "1":
+        return .one
+    case "2":
+        return .two
+    case "3":
+        return .three
+    case "4":
+        return .four
+    case "5":
+        return .five
+    case "6":
+        return .six
+    case "7":
+        return .seven
+    case "8":
+        return .eight
+    case "9":
+        return .nine
+    case "+":
+        return .plus
+    case "-":
+        return .minus
+    case "*":
+        return .multiply
+    case "/":
+        return .divide
+    case "*(-1)":
+        return .sign
+    default: return nil
     }
 }

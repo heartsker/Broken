@@ -6,6 +6,8 @@
 //
 import UIKit
 import CoreData
+import Core
+
 class CoreDataManager {
 
     static let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate ?? AppDelegate()
@@ -19,14 +21,14 @@ class CoreDataManager {
         }
     }
 
-    static func fetch() throws -> [Level] {
-        do {
-            guard let object = try? managedContext.fetch(Level.fetchRequest()) else {
-                throw CoreDataError.fetchingError(Level.self)
-            }
-            return object
-        } catch {
-            throw CoreDataError.fetchingError(Level.self)
-        }
-    }
+//    static func fetch() throws -> [Level] {
+//        do {
+//            guard let object = try? managedContext.fetch(Level.fetchRequest()) else {
+//                throw CoreDataError.fetchingError(Level.self)
+//            }
+//            return object
+//        } catch {
+//            throw CoreDataError.fetchingError(Level.self)
+//        }
+//    }
 }
