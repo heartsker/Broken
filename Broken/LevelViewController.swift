@@ -11,7 +11,11 @@ import Core
 
 class LevelViewController: UIViewController {
 
-    var coordinator: AppCoordinator?
+    lazy private var numPad: UIView = {
+        NumberPadView(buttons: Button.allCases)
+    }()
+
+    var coordinator: AppCoordinator!
 
     lazy private var mainLabel: UILabel = {
         let label = UILabel()
@@ -24,63 +28,52 @@ class LevelViewController: UIViewController {
         return label
     }()
 
-    private func button (for title: String) -> UIButton {
-        let numbersButton = UIButton()
-        numbersButton.setTitleColor(.white, for: .normal)
-        numbersButton.backgroundColor = .darkGray
-        numbersButton.frame = CGRect(x: 15, y: 30, width: 100, height: 100)
-        numbersButton.addTarget(self, action: #selector(pressed), for: .touchUpInside)
-        numbersButton.setTitle(title, for: .normal)
-        view.addSubview(numbersButton)
-        return numbersButton
-
+    @objc func numberPressed (_ sender: UIButton) {
+        _ = sender.tag - 1
     }
 
-    @objc func pressed () {
+    @objc func startButtonTapped() {
     }
 
     var buttons: [UIButton] = []
 
-    private func createButtons () {
-        for value in Button.allCases {
-            buttons.append(button(for: value.description))
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
 }
 
 extension LevelViewController {
     private func setup() {
         setupSubviews()
-        setupButtons()
+        setupConstraints()
         setupAppearance()
     }
 
     private func setupSubviews() {
         view.addSubview(mainLabel)
-        view.addSubview(button(for: "1")) // здесь пробегаемся по всему массиву
+        view.addSubview(numPad)
     }
 
-    private func setupButtons () {
+    private func setupConstraints () {
         mainLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.width.equalTo(300)
+            make.width.equalTo(200)
             make.height.equalTo(mainLabel.snp.width).dividedBy(2)
         }
-
-//        numbersButton.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//            make.width.equalTo(300)
-//            make.height.equalTo(numbersButton.snp.width).dividedBy(2)
-//        }
+        numPad.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalTo(500)
+            make.bottom.equalToSuperview().offset(-50)
+        }
     }
 
     private func setupAppearance() {
         view.backgroundColor = .white
     }
-
 }

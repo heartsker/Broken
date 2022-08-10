@@ -20,16 +20,19 @@ class AppCoordinator: ICoordinator {
     }
 
     func start() {
-
-        let vc = LevelsViewController()
+        let vc = MainViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
 
     func showLevels () {
-        let vc = LevelViewController()
+        let vc = LevelsViewController()
         navigationController.pushViewController(vc, animated: false)
 
+    }
+    func showSettings () {
+        let vc = SettingsViewController()
+        navigationController.pushViewController(vc, animated: false)
     }
 
     func showLevelView(level: Level) {
